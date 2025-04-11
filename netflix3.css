@@ -1,0 +1,246 @@
+/* Global Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  background-color: #0e0e0e;
+  background-image: url('45994-3000x2003-desktop-hd-netflix-wallpaper-photo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 1;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(14, 14, 14, 0.7);
+  z-index: -1;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.4s ease;
+}
+
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.85);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.logo {
+  color: rgb(241, 65, 11);
+  font-size: 30px;
+  font-weight: bold;
+  animation: glow 2s infinite alternate;
+  font-family: 'Netflix', system-ui, sans-serif;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px red, 0 0 10px orange;
+  }
+  to {
+    text-shadow: 0 0 15px red, 0 0 25px yellow;
+  }
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 250px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: rgb(251, 144, 6);
+}
+
+.profile-icon img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  transition: 0.4s ease;
+}
+
+.profile-icon img:hover {
+  box-shadow: 0 0 10px rgb(236, 88, 3);
+  border-color: rgb(254, 25, 9);
+}
+
+/* Banner Styles */
+.banner,
+.banner-breaking {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 60px;
+}
+
+.banner {
+  background: url('123760-2560x1440-desktop-hd-stranger-things-background-photo.jpg') no-repeat center center/cover;
+}
+
+.banner-breaking {
+  background: url('wp6794245-breaking-bad-4k-wallpapers.jpg') no-repeat center center/cover;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 10%, rgba(0,0,0,0.3) 50%, transparent 90%);
+  z-index: 1;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.netflix-label {
+  font-size: 18px;
+  color: #efe8e9;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 60px;
+  font-weight: bold;
+  color: #f40d0d;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.BREAKING {
+  font-size: 60px;
+  font-weight: bold;
+  color: cyan;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 30px;
+  color: #ddd;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.button {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.button.play {
+  background-color: white;
+  color: black;
+}
+
+.button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.rating {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 6px 12px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+/* Faded Divider */
+.faded-gap {
+  height: 100px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #0e0e0e);
+}
+
+/* Headings inside rows */
+.row h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 20px 10px;
+  text-align: center;
+}
+
+/* Posters */
+.row__posters {
+  display: flex;
+  overflow-x: scroll;
+  padding: 1px;
+  object-fit: contain;
+  max-height: 200px;
+  margin-right: 10px;
+  transition: transform 450ms;
+  cursor: pointer;
+}
+
+.row__posters:hover {
+  transform: scale(1.08);
+}
+
+.row__posters::-webkit-scrollbar {
+  display: none;
+}
+
+.row__posterslarge {
+  max-height: 250px;
+  margin: 0 10px;
+  transition: transform 50ms;
+}

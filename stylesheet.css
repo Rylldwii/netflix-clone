@@ -1,0 +1,139 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #000;
+  }
+  
+  /* Header */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background: black;
+  }
+  .logo {
+    font-size: 2rem;
+    color: rgb(227, 13, 13);
+  }
+  .nav-actions {
+    display: fix;
+    align-items: center;
+    gap: 1rem;
+  }
+  .language-select, .sign-in-btn {
+    padding: 0.5rem;
+    background: #111;
+    color: white;
+    border: 1px solid #555;
+    border-radius: 4px;
+  }
+  .sign-in-btn {
+    background-color: rgb(30, 28, 28);
+    color: rgb(239, 102, 5);
+    font-weight: bold;
+  }
+  
+  /* Hero Section */
+  .hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
+    position: relative;
+  }
+  
+  .hero-content {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    max-width: 40%;
+    z-index: 2;
+  }
+  .series-badge {
+    font-size: 1.2rem;
+    color: rgb(232, 220, 220);
+  }
+  .show-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+  }
+  .show-info {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .description {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+  .call-to-action {
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  .email-form {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .email-form input {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    flex: 1;
+  }
+  .email-form button {
+    padding: 0.75rem 1rem;
+    background-color: rgb(238, 39, 21);
+    color: rgb(240, 231, 231);
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 4rem 2rem;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: rgb(227, 216, 216);
+    z-index: 1;
+  }
+  
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Optional dark overlay */
+    z-index: -1;
+  }
+  
+
+.navbar{
+  
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* ensures it stays above other content */
+    background-color: #000000; /* optional: gives it a background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* optional: adds shadow */
+  
+  
+}
+body {
+  background-image: url('netflix-background-gs7hjuwvv2g0e9fj.jpg'); /* or full URL */
+  background-size: cover;        /* makes it fill the screen */
+  background-position: center;   /* centers the image */
+  background-repeat: no-repeat;  /* prevents tiling */
+  background-attachment: fixed;  /* THIS is what keeps it fixed */
+}
