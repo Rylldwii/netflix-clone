@@ -1,39 +1,24 @@
-/* Global Resets */
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  color: white;
+  background: #151414;
+  padding-top: 70px;
+
+}
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: white;
-  background-color: #0e0e0e;
-  background-image: url('45994-3000x2003-desktop-hd-netflix-wallpaper-photo.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  position: relative;
-  z-index: 1;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(14, 14, 14, 0.7);
-  z-index: -1;
-}
-
-/* Navbar */
+/* Navigation bar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 10px;
   background-color: transparent;
   position: fixed;
   width: 100%;
@@ -41,206 +26,299 @@ body::before {
   z-index: 1000;
   transition: background-color 0.4s ease;
 }
-
 .navbar.scrolled {
   background-color: rgba(0, 0, 0, 0.85);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.nav-left {
-  display: flex;
-  align-items: center;
-  gap: 0;
-}
-
 .logo {
-  color: rgb(241, 65, 11);
+  color:cyan;
   font-size: 30px;
   font-weight: bold;
   animation: glow 2s infinite alternate;
-  font-family: 'Netflix', system-ui, sans-serif;
-}
-
-@keyframes glow {
-  from {
-    text-shadow: 0 0 5px red, 0 0 10px orange;
-  }
-  to {
-    text-shadow: 0 0 15px red, 0 0 25px yellow;
-  }
+  font-family: netflix system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 250px;
+  gap: 140px;
+  padding-left: 0px;
 }
 
 .nav-links a {
+  position: relative;
   text-decoration: none;
   color: white;
   font-size: 17px;
-  transition: color 0.3s;
+  transition: color 0.2s;
 }
 
 .nav-links a:hover {
-  color: rgb(251, 144, 6);
+  color: cyan;
+}
+.nav-links a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: rgb(248, 240, 240);
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
+.navbar.scrolled .nav-links a {
+  color: white;
+  
+}
+
+.nav-list a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: rgb(255, 248, 248);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+
+/* Scrolled state */
+.navbar.scrolled .nav-links a {
+  color: white;
+}
+
+/* Hover when scrolled */
+.navbar.scrolled .nav-links a:hover {
+  color: cyan;
+}
+  
+/* navigation closed */
+
+
+/* proflie button */
 .profile-icon img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 2px solid transparent;
-  transition: 0.4s ease;
+  transition: 0.3s ease;
+  border: 2p solid transparent;
 }
-
 .profile-icon img:hover {
-  box-shadow: 0 0 10px rgb(236, 88, 3);
-  border-color: rgb(254, 25, 9);
+  box-shadow: 0 0 10px cyan;
+  border-color: cyan;
 }
+/* profile button closed */
 
-/* Banner Styles */
-.banner,
-.banner-breaking {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 60px;
-}
 
-.banner {
-  background: url('123760-2560x1440-desktop-hd-stranger-things-background-photo.jpg') no-repeat center center/cover;
-}
 
-.banner-breaking {
-  background: url('wp6794245-breaking-bad-4k-wallpapers.jpg') no-repeat center center/cover;
-}
 
-.banner-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to top, rgba(0,0,0,0.8) 10%, rgba(0,0,0,0.3) 50%, transparent 90%);
-  z-index: 1;
-}
 
-.banner-content {
-  position: relative;
-  z-index: 2;
-  max-width: 700px;
-}
-
-.netflix-label {
-  font-size: 18px;
-  color: #efe8e9;
-  font-weight: bold;
-  letter-spacing: 2px;
-  margin-bottom: 10px;
-}
-
-.title {
-  font-size: 60px;
-  font-weight: bold;
-  color: #f40d0d;
-  line-height: 1;
-  margin-bottom: 20px;
-}
-
-.BREAKING {
-  font-size: 60px;
-  font-weight: bold;
-  color: cyan;
-  line-height: 1;
-  margin-bottom: 20px;
-}
-
-.description {
-  font-size: 18px;
-  line-height: 1.4;
-  margin-bottom: 30px;
-  color: #ddd;
-}
-
-.buttons {
-  display: flex;
-  gap: 15px;
-}
-
-.button {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: white;
+/* logout button */
+.logout {
+  background-color:rgb(69, 67, 67);
+  color: rgb(217, 214, 214);
+  padding: 10px 10px;
   border: none;
-  padding: 12px 25px;
-  font-size: 16px;
+  border-radius: 40px;
+  font-size: 14px;
+  font-weight: bold;
   cursor: pointer;
-  border-radius: 4px;
   transition: background 0.3s ease;
+}
+.logout:hover {
+  background-color: cyan;
+}
+
+/* logout button  closed*/
+
+/* Sexy Search Bar */
+.search-container {
+  position: relative;
+  width: 400px;
+  transition: all 0.4s ease-in-out;
+}
+.search-input {
+  width: 100%;
+  padding: 10px 5px 12px 20px;
+  border: 1px solid transparent;
+  border-radius: 40px;
+  font-size: 15px;
+  outline: none;
+  background: rgba(225, 220, 220, 0.1);
+  color: #fff;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: 0.2s ease;
+}
+.search-input::placeholder {
+  color: #e7dbdb;
+  transition: 0.3s ease;
   display: flex;
-  align-items: center;
-  gap: 8px;
+  padding-right: 39px;
+  position: relative;
 }
 
-.button.play {
-  background-color: white;
-  color: black;
+.search-input:focus {
+  background: rgba(45, 44, 44, 0.275);
+  border-color:cyan;
+  box-shadow: 0 0 15px cyan, 0 0 25px #0aff6c33;
+}
+/* Sexy Search Bar closed */
+
+
+body {
+  margin: 0;
+  background-color: #141414;
+  color: #fff;
+  font-family: Arial, sans-serif;
 }
 
-.button:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+h2 {
+  padding: 10px 20px;
+  display: flex;
+   justify-content:center ;
 }
 
-.rating {
+.poster-row {
+  display: flex;
+  overflow-x: auto;
+  padding: 0 20px 20px;
+  gap: 10px;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+}
+
+.poster-row::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.poster {
+  position: relative;
+  flex: 0 0 auto;
+  width: 200px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  margin: 15PX;
+}
+
+.poster:hover {
+  transform: scale(1.1);
+  z-index: 2;
+}
+
+.poster-buttons {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 6px 12px;
-  border-radius: 3px;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
   font-size: 14px;
 }
 
-/* Faded Divider */
-.faded-gap {
-  height: 100px;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #0e0e0e);
+.btn:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 
-/* Headings inside rows */
-.row h2 {
-  font-size: 20px;
-  font-weight: 600;
-  margin: 20px 10px;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: white;
+}
+
+.main-banner {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-image 0.5s ease;
+  border-bottom: 2px solid #444;
+}
+
+.banner-text {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.poster-grid {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: center;
+  gap: 20px;
+}
+
+.poster {
+  width: 150px;
+  height: 225px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.poster:hover {
+  transform: scale(1.05);
+}
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: white;
+}
+
+.main-banner {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-image 0.5s ease;
+  border-bottom: 2px solid #444;
+}
+
+.banner-text {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 2rem;
   text-align: center;
 }
 
-/* Posters */
-.row__posters {
+.poster-grid {
   display: flex;
-  overflow-x: scroll;
-  padding: 1px;
-  object-fit: contain;
-  max-height: 200px;
-  margin-right: 10px;
-  transition: transform 450ms;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: center;
+  gap: 20px;
+}
+
+.poster {
+  width: 150px;
+  height: 225px;
+  border-radius: 10px;
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.row__posters:hover {
-  transform: scale(1.08);
+.poster:hover {
+  transform: scale(1.05);
 }
 
-.row__posters::-webkit-scrollbar {
-  display: none;
-}
 
-.row__posterslarge {
-  max-height: 250px;
-  margin: 0 10px;
-  transition: transform 50ms;
-}
+

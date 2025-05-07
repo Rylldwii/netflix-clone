@@ -1,0 +1,428 @@
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  color: white;
+  background: #000;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Navigation bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 9px;
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.4s ease;
+  background-color: #00000000;
+}
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.85);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  color:red;
+  font-size: 30px;
+  font-weight: bold;
+  animation: glow 2s infinite alternate;
+  font-family: netflix system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: 10px;
+}
+.logo:hover{
+  color: aqua;
+  transition: 0.3s;
+ box-shadow: 0 0 10px cyan;
+border-radius: 50px;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 140px;
+  padding-left: 0px;
+}
+
+.nav-links a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: cyan;
+}
+.nav-links a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: rgb(234, 228, 228);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar.scrolled .nav-links a {
+  color: white;
+  
+}
+
+.nav-list a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+
+/* Scrolled state */
+.navbar.scrolled .nav-links a {
+  color: white;
+}
+
+/* Hover when scrolled */
+.navbar.scrolled .nav-links a:hover {
+  color: cyan;
+}
+  
+/* navigation closed */
+
+
+/* proflie button */
+.profile-icon img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: 0.3s ease;
+  border: 2p solid transparent;
+}
+.profile-icon img:hover {
+  box-shadow: 0 0 10px cyan;
+  border-color: cyan;
+}
+/* profile button closed */
+
+
+/* stranger things  */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('123760-2560x1440-desktop-hd-stranger-things-background-photo.jpg') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 40px;
+
+  margin-bottom: 40px;
+  
+
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 10%, rgba(0, 0, 0, 0.3) 50%, transparent 90%);
+  z-index: 1;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.netflix-label {
+  font-size: 15px;
+  color: #f8f1f0;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: bold;
+  color:rgb(255, 12, 12);
+  line-height: 1;
+  margin-bottom: 2px;
+  font-family: ITC Benguiat;
+}
+
+.buttons {
+  display: flex;
+  gap: 18px;
+}
+
+.button {
+  background-color: rgba(237, 219, 219, 0.1);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+/* stranger things  closed */
+
+
+/* logout button */
+.logout {
+  background-color:rgb(69, 67, 67);
+  color: rgb(217, 214, 214);
+  padding: 10px 10px;
+  border: none;
+  border-radius: 40px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.logout:hover {
+  background-color: cyan;
+}
+
+/* logout button  closed*/
+
+/*  Search Bar */
+.search-container {
+  position: relative;
+  width: 400px;
+  transition: all 0.4s ease-in-out;
+}
+.search-input {
+  width: 100%;
+  padding: 10px 5px 12px 20px;
+  border: 1px solid transparent;
+  border-radius: 40px;
+  font-size: 15px;
+  outline: none;
+  background: rgba(225, 220, 220, 0.1);
+  color: #fff;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: 0.2s ease;
+}
+.search-input::placeholder {
+  color: #e7dbdb;
+  transition: 0.3s ease;
+  display: flex;
+  padding-right: 39px;
+  position: relative;
+}
+
+.search-input:focus {
+  background: rgba(45, 44, 44, 0.275);
+  border-color:cyan;
+  box-shadow: 0 0 15px cyan, 0 0 25px #0aff6c33;
+}
+/*  Search Bar closed */
+
+/* Solo levling */
+.sung {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('solo-leveling-sung-3840x2160-17277.jpg') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 60px;
+  margin-bottom: 40px;
+
+}
+
+
+
+.description {
+  font-size: 16px;
+  line-height: 1.4;
+  margin-bottom: 30px;
+  color: #ddd;
+}
+
+.button.play {
+  background-color: white;
+  color: black;
+}
+
+.button:hover {
+  background-color: cyan;
+}
+/* solo levling closed */
+
+
+
+
+
+
+
+
+
+
+h2 {
+  padding: 10px 10px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.poster-row {
+  display: flex;
+  overflow-x: auto;
+  padding:  20px 20px;
+  gap: 1px;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+}
+
+
+
+.poster {
+  position: relative;
+  flex: 0 0 auto;
+  width: 200px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  cursor:pointer;
+  margin: 15px;
+}
+
+.poster:hover {
+  transform: scale(1.1);
+  z-index: 20;
+}
+
+.poster-buttons {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+
+
+  /* barbie */
+.barbie {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('brb.jpg') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 60px;
+  margin-bottom: 40px;
+
+}
+
+.title-barbie {
+  font-size: 60px;
+  font-weight: bold;
+  color: #f1eeee;
+  line-height: 1;
+  margin-bottom: 20px;
+  font-family: etarnel;
+  text-shadow: 
+    2px 2px 2px pink,
+    0 0 10px pink,
+    0 0 20px hotpink;
+}
+
+
+.description {
+  font-size: 16px;
+  line-height: 1.4;
+  margin-bottom: 30px;
+  color: #ddd;
+}
+
+.button.play {
+  background-color: white;
+  color: black;
+}
+
+.button:hover {
+  background-color: cyan;
+}
+/* barbie*/
+
+
+/* got */
+.got {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('game\ of\ th.jpg') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 60px;
+  margin-bottom: 40px;
+
+}
+
+.title-got {
+  font-size: 60px;
+  font-weight: bold;
+  color: gold;
+  line-height: 1;
+  margin-bottom: 20px;
+  font-family: etarnel;
+  text-shadow: 
+  1px 0px 4px rgba(244, 237, 238, 0.433),
+  0 0 1px rgb(247, 236, 238),
+  0 0 2px rgb(233, 225, 229);
+ 
+}
+
+
+.description {
+  font-size: 16px;
+  line-height: 1.4;
+  margin-bottom: 30px;
+  color: #ddd;
+}
+
+.button.play {
+  background-color: white;
+  color: black;
+}
+
+.button:hover {
+  background-color: cyan;
+}
+/* got closed */
